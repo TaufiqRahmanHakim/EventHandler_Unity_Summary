@@ -4,7 +4,7 @@
 
 ## Kelas ContainerCounter
 
-Kelas `ContainerCounter` bertanggung jawab untuk mendeteksi saat pemain berinteraksi dengan objek wadah. Kelas ini menggunakan event handler untuk memberi tahu kelas lain saat hal ini terjadi.
+Cpntoh code Kelas `ContainerCounter` bertanggung jawab untuk mendeteksi saat pemain berinteraksi dengan objek wadah. Kelas ini menggunakan event handler untuk memberi tahu kelas lain saat hal ini terjadi.
 
 ```csharp
 public class ContainerCounter : BaseCounter
