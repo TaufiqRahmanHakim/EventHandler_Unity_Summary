@@ -25,7 +25,7 @@ public class ContainerCounter : BaseCounter
 }
 ```
 
-## Pengaturan Event Handler
+## Setup Event Handler
 
 Event handler didefinisikan menggunakan delegasi `EventHandler`. Ini memungkinkan kelas lain untuk berlangganan event dan menerima pemberitahuan saat event dipicu.
 
@@ -34,6 +34,18 @@ public event EventHandler OnPlayerGrabbedObject;
 ```
 ```csharp
 OnPlayerGrabbedObject?.Invoke(this, EventArgs.Empty);
+```
+```csharp
+private void Start()
+    {
+        containerCounter.OnPlayerGrabbedObject += ContainerCounter_OnPlayerGrabbedObject;
+    }
+```
+```csharp
+private void ContainerCounter_OnPlayerGrabbedObject(object sender, System.EventArgs e)
+    {
+        animator.SetTrigger(OPEN_CLOSE);
+    }
 ```
 
 ## Implementasi Event Handler
